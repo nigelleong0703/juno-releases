@@ -27,13 +27,16 @@ The first time macOS asks to let Juno use its keychain item ("Juno Safe Storage"
 ## What runs where
 
 - **On this Mac** (the default): everything stays on your Mac. Data lives in `~/Library/Application Support/@agent-desktop/desktop/`. Agents work in `~/Juno`; anything outside it, and every command, asks you first.
-- **Sandbox computer**: a Linux desktop with Chromium in a lightweight VM. Juno starts it the first time an agent needs a browser.
+- **Sandbox computer**: a Linux desktop with Chromium in a lightweight VM. The first time an agent needs a browser, Juno downloads the sandbox image (about 640 MB, [ghcr.io/nigelleong0703/juno-sandbox](https://github.com/users/nigelleong0703/packages/container/package/juno-sandbox)) and starts it with Apple's `container` (built in, macOS 26+) or Docker.
+
+## Updates
+
+From 0.1.1 on, Juno checks this repository for new versions, downloads them in the background and asks you to restart. (0.1.0 has no updater: install 0.1.1 by hand once.)
 
 ## Known limitations (0.1 beta)
 
-- The sandbox image is not downloadable yet, so on other Macs agents have files and commands on your Mac but no sandbox browser. This comes in the next release.
 - Not notarized (see Install step 2).
-- No automatic updates yet: download new versions from Releases.
+- LibreOffice installs inside the sandbox the first time a document needs it, so that first conversion takes a few minutes.
 
 ## Feedback
 
