@@ -1,8 +1,8 @@
 # Juno for Mac
 
-Juno is a team of AI agents that works for you. Each agent can use your Mac (files and commands, always asking first) and its own sandbox computer with a browser.
+Juno is an AI teammate that lives in your group chats. This repository hosts the Mac installers only; the source code, the server and the other clients are at [nigelleong0703/juno](https://github.com/nigelleong0703/juno).
 
-This repository only hosts the installers. The source code is not public yet: Juno is a work in progress.
+The installers below are the 0.1 beta: a standalone Mac build where agents use your Mac (files and commands, always asking first) and a sandbox computer with a browser. Newer features (group chats on Slack, Feishu, Discord and Telegram, connected apps, documents) need a Juno server; see the main repository.
 
 ## Download
 
